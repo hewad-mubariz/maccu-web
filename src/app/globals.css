@@ -1,26 +1,367 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+  --paper: #f4ede1;
+  --paper-deep: #eadcc8;
+  --ink: #10392b;
+  --ink-soft: #2f4a3e;
+  --ink-faint: #6b8576;
+  --forest: #10392b;
+  --coral: #e0664b;
+  --coral-deep: #c9553c;
+  --peach: #efdcc3;
+  --sun: #eda335;
+  --rule: #cfc3ad;
+  --string: #d9573e;
+  --screen: #f6f0e6;
+  /* Desktop layout unit: the hero is composed on a 100u-wide canvas. */
+  --u: min(1vw, 20px);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-forest: var(--forest);
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
+  --color-peach: var(--peach);
+  --color-string: var(--string);
+  --color-sun: var(--sun);
+  --color-rule: var(--rule);
+  --color-screen: var(--screen);
+  --font-display: var(--font-fraunces);
+  --font-serif: var(--font-source-serif);
+  --font-hand: var(--font-caveat);
+  --font-ui: var(--font-nunito);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-source-serif), "Times New Roman", serif;
+}
+
+.paper-grain {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse at 12% 0%, rgb(255 255 255 / 0.5), transparent 46%),
+    radial-gradient(ellipse at 88% 100%, rgb(180 140 100 / 0.07), transparent 52%),
+    linear-gradient(rgb(246 240 228 / 0.62), rgb(246 240 228 / 0.62)),
+    url("/textures/paper-grain.jpg"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.82 0 0 0 0 0.75 0 0 0 0 0.64 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: auto, auto, auto, 420px 420px, 180px 180px;
+  background-repeat: no-repeat, no-repeat, repeat, repeat, repeat;
+  background-blend-mode: normal, normal, normal, multiply, multiply;
+}
+
+.display-bold {
+  font-weight: 600;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 144;
+}
+
+.display-logo {
+  font-weight: 700;
+  font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 72;
+}
+
+/* Hero composition (desktop). Horizontal anchors follow the viewport width,
+   sizes and vertical anchors follow --u so the scene fits short screens. */
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    display: block;
+    height: calc(var(--u) * 75);
+  }
+
+  .hero-copy {
+    position: absolute;
+    top: calc(var(--u) * 6);
+    left: 0;
+    width: calc(var(--u) * 46);
+  }
+
+  .hero-steps {
+    position: absolute;
+    top: calc(var(--u) * 51);
+    left: 0;
+    grid-template-columns: repeat(3, calc(var(--u) * 16.8));
+    gap: 0;
+  }
+
+  /* Below the clothesline, clear of both the drawings and the steps. */
+  .hero-phone {
+    position: absolute;
+    top: calc(var(--u) * 26);
+    left: 55vw;
+    width: calc(var(--u) * 23);
+  }
+
+  .hero-note {
+    top: calc(var(--u) * 33);
+    left: 83.4vw;
+    width: calc(var(--u) * 10);
+    font-size: calc(var(--u) * 2);
+  }
+
+  .hero-book {
+    top: calc(var(--u) * 50);
+    left: 79.4vw;
+    width: calc(var(--u) * 22);
+  }
+}
+
+.hero-book-cover,
+.hero-crayon {
+  width: 100%;
+  height: auto;
+}
+
+.hero-book-cover {
+  clip-path: inset(0 25% 0 0);
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 18px 18px rgb(60 40 20 / 0.18));
+}
+
+.hero-crayon {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(22% 0 22% 81%);
+  transform-origin: 86% 48%;
+  transform: translate(-56%, 42%) rotate(-58deg);
+  filter: drop-shadow(0 6px 6px rgb(60 40 20 / 0.2));
+}
+
+.paper-root {
+  pointer-events: auto;
+  will-change: transform;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.paper-root.is-held {
+  cursor: grabbing;
+}
+
+.clothesline {
+  cursor: grab;
+}
+
+.sheet {
+  position: absolute;
+  inset: 10px 0 0;
+  z-index: 1;
+  filter: drop-shadow(0 8px 10px rgb(80 50 20 / 0.16));
+}
+
+.sheet-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  display: block;
+}
+
+.sheet-fold {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.sheet-fold[data-corner="br"] {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(225deg, #efe4d0 0 46%, #cbb99a 50%, transparent 52%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.sheet-fold[data-corner="bl"] {
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #efe4d0 0 46%, #cbb99a 50%, transparent 52%);
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.line-pin {
+  --pin-h: 58px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--pin-h) * 0.76);
+  height: var(--pin-h);
+  pointer-events: auto;
+  cursor: grab;
+  touch-action: none;
+  z-index: 8;
+  filter: drop-shadow(0 3px 2px rgb(48 24 8 / 0.42));
+  will-change: transform;
+  transform-origin: 50% 34.5%;
+}
+
+@media (min-width: 1024px) {
+  .line-pin {
+    --pin-h: calc(var(--u) * 4.3);
+  }
+}
+
+.pin-stack {
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 36%;
+}
+
+.pin-jaw {
+  transform-box: fill-box;
+  transform-origin: 50% 60%;
+  transform: rotate(calc(var(--pin-open, 0) * -7deg));
+  transition: transform 110ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.is-held .sheet {
+  filter: brightness(1.03) drop-shadow(0 18px 18px rgb(80 50 20 / 0.22));
+}
+
+.phone {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1470 / 3000;
+  /* Children size in cqw of the phone's width so every rim stays even at any size. */
+  container-type: inline-size;
+  filter: drop-shadow(16px 24px 24px rgb(54 39 24 / 0.2)) drop-shadow(2px 4px 5px rgb(54 39 24 / 0.14));
+}
+
+/* Titanium rim → black bezel → screen, proportioned after the 1470×3000 frame. */
+.phone-body {
+  position: absolute;
+  inset: 0;
+  padding: 2.1cqw;
+  border-radius: 15.6cqw;
+  background:
+    linear-gradient(90deg, #8e8f93 0%, #f2f1ed 0.9%, #b9b8b4 1.8%, transparent 2.6%, transparent 97.4%, #b9b8b4 98.2%, #f2f1ed 99.1%, #8e8f93 100%),
+    linear-gradient(180deg, #f4f3ef 0%, #c9c8c3 1.4%, #dedcd7 50%, #c3c2bd 98.6%, #8f9094 100%);
+  box-shadow: inset 0 0 0 0.25cqw rgb(80 80 84 / 0.45);
+}
+
+.phone-glass {
+  position: relative;
+  height: 100%;
+  padding: 2.5cqw;
+  border-radius: 13.5cqw;
+  background: #020203;
+}
+
+.phone-screen {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 11cqw;
+  background: var(--screen);
+}
+
+.phone-island {
+  position: absolute;
+  top: 4.6cqw;
+  left: 50%;
+  width: 27cqw;
+  height: 7.6cqw;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #000;
+  z-index: 2;
+}
+
+.phone-lens {
+  position: absolute;
+  top: 50%;
+  right: 2cqw;
+  width: 4cqw;
+  height: 4cqw;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #3d4f86 0 14%, #111a33 38%, #050608 72%);
+}
+
+.phone-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(118deg, rgb(255 255 255 / 0.12), transparent 28%, transparent 74%, rgb(255 255 255 / 0.04));
+  pointer-events: none;
+}
+
+.phone-key {
+  position: absolute;
+  z-index: -1;
+  width: 1.4cqw;
+  border-radius: 0.6cqw;
+  background: linear-gradient(90deg, #7d7e82, #e6e5e0 55%, #9a9a9d);
+}
+
+.phone-key-action { left: -0.9cqw; top: 19.5%; height: 3.7%; }
+.phone-key-up { left: -0.9cqw; top: 26.7%; height: 6.5%; }
+.phone-key-down { left: -0.9cqw; top: 35.2%; height: 6.5%; }
+.phone-key-power { right: -0.9cqw; top: 28.9%; height: 10.6%; }
+
+.rope-grab {
+  pointer-events: stroke;
+  cursor: grab;
+  touch-action: none;
+}
+
+.rope-grab:active {
+  cursor: grabbing;
+}
+
+.sheet-paper {
+  position: absolute;
+  inset: 0;
+  padding: 7%;
+  background: #f8f3ea url("/textures/paper-grain.jpg") center / 180px;
+  background-blend-mode: multiply;
+  clip-path: polygon(0 1%, 8% 0, 22% 1.2%, 37% 0.2%, 52% 1%, 68% 0, 83% 1.1%, 100% 0.3%, 99.2% 14%, 100% 31%, 99% 48%, 100% 66%, 99.3% 83%, 100% 99%, 84% 100%, 67% 98.9%, 50% 100%, 33% 99%, 17% 100%, 0 99.2%, 0.9% 82%, 0 64%, 0.8% 47%, 0 30%, 0.9% 15%);
+}
+
+.sheet-paper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.rope-stroke {
+  stroke-width: clamp(3px, calc(var(--u) * 0.24), 4px);
+  filter: drop-shadow(0 1px 0 rgb(90 30 10 / 0.18));
+}
+
+.rope-shadow-stroke {
+  stroke-width: clamp(3.6px, calc(var(--u) * 0.3), 4.8px);
+}
+
+.mote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  background: #d8c4a0;
+  pointer-events: none;
 }

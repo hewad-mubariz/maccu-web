@@ -1,0 +1,5 @@
+# pnpm 11+ reads project settings from this file (not .npmrc).
+# `packages` is omitted so only the root package is included.
+engineStrict: true
+allowBuilds:
+  unrs-resolver: true
