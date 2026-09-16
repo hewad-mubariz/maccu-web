@@ -12,7 +12,7 @@ export function ProsePage({
   children: ReactNode;
 }) {
   return (
-    <div className="flex min-h-full flex-col">
+    <div className="flex min-h-svh flex-col">
       <SiteHeader />
       <main className="mx-auto w-full max-w-2xl flex-1 px-5 py-16 sm:px-8">
         <Logo className="mb-8 text-[1.4rem]" />
