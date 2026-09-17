@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Delete account",
   description:
-    "How to request deletion of a Maccu account and what that does — and does not — remove.",
+    "How to delete a Maccu account in the app or by request, and what that removes.",
 };
 
 const deleteMailto = `${CONTACT_MAILTO}?subject=Delete%20my%20Maccu%20account`;
@@ -14,40 +14,55 @@ export default function DeleteAccountPage() {
   return (
     <ProsePage title="Delete account" updated={LEGAL_UPDATED}>
       <p>
-        You can ask us to delete your Maccu account at any time. You do not
-        need the app installed to send the request.
-      </p>
-      <p>
-        Write to{" "}
-        <a href={deleteMailto}>{CONTACT_EMAIL}</a> from the email address on
-        the account. Please say you want the Maccu account deleted. We will
-        confirm when it is done.
+        You can delete your Maccu account at any time. The quickest way is in
+        the app.
       </p>
 
-      <h2>What we delete</h2>
+      <h2>In the app</h2>
+      <p>
+        Open your child&apos;s profile, scroll to the bottom, tap{" "}
+        <strong>Delete account</strong>, and confirm. This permanently
+        deletes:
+      </p>
       <ul>
-        <li>The sign-in account we hold for you</li>
+        <li>your Maccu account</li>
         <li>
-          Family profile records attached to that account (names, birth years,
-          avatar details)
+          family profiles attached to it (names, birth years, avatars and
+          profile photos)
+        </li>
+        <li>drawings saved on that device</li>
+        <li>
+          Maccu backups in your iCloud or Google Drive, when the app can reach
+          them
         </li>
       </ul>
+      <p>This cannot be undone.</p>
+
+      <h2>Without the app</h2>
       <p>
-        Drawings on a phone or tablet stay there until you delete them or
-        remove the app. We cannot reach into a device from this email request.
+        If you no longer have Maccu installed, write to{" "}
+        <a href={deleteMailto}>{CONTACT_EMAIL}</a> from the email address on
+        the account and say you want it deleted. You do not need to reinstall
+        the app. We will delete the account and its family profiles and
+        profile photos, and confirm when it is done.
+      </p>
+      <p>
+        We cannot reach a phone or tablet from an email request. Drawings on a
+        device stay there until you delete them or remove the app, and
+        backups in your iCloud or Google Drive stay until you remove them
+        there.
       </p>
 
-      <h2>What we cannot cancel for you</h2>
+      <h2>What deleting does not cancel</h2>
       <ul>
         <li>
           <strong>Maccu Premium.</strong> A store subscription keeps renewing
-          until you cancel it in Apple ID or Google Play settings. Deleting
-          the Maccu account does not stop those charges.
+          until you cancel it in your Apple ID or Google Play settings.
+          Deleting the account does not stop those charges.
         </li>
         <li>
-          <strong>iCloud or Google Drive backups.</strong> Those files live in
-          your Apple or Google account. Remove them there if you want the
-          copies gone too.
+          <strong>Purchase records.</strong> Apple, Google, and RevenueCat may
+          keep records of past purchases as billing and tax rules require.
         </li>
         <li>
           <strong>Pages you already shared.</strong> A picture sent to Photos,
@@ -55,13 +70,6 @@ export default function DeleteAccountPage() {
         </li>
       </ul>
 
-      <h2>Before you write</h2>
-      <p>
-        If you only want a fresh start on this device, signing out or deleting
-        the app may be enough. If you want the account itself gone, email is
-        the right path. We will not ask you to reinstall Maccu in order to
-        request deletion.
-      </p>
       <p>
         More about how information is handled:{" "}
         <a href="/privacy">Privacy Policy</a>

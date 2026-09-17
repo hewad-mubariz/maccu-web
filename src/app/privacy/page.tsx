@@ -14,8 +14,8 @@ export default function PrivacyPage() {
       <p>
         Maccu is a family sketchbook. You photograph a drawing, keep it in a
         notebook, and watch a childhood of pictures grow. This policy explains
-        what we collect to make that work, where it lives, and the choices you
-        have.
+        what we collect to make that work, where it lives, who helps us run
+        it, and the choices you have.
       </p>
       <p>
         We do not sell personal data. We do not show ads. We do not use
@@ -35,68 +35,82 @@ export default function PrivacyPage() {
         Grown-up corner. Children do not create their own Maccu accounts.
       </p>
       <p>
-        If you add a child&apos;s name, age, photo, or drawings, you are
-        responsible for doing so with the care that family material deserves,
-        and only for children you are allowed to represent.
+        If you add a child&apos;s name, age, photo, or drawings, please do so
+        only for children you are allowed to represent.
       </p>
 
       <h2>Information we keep</h2>
       <h3>Your account</h3>
       <p>
-        Signing in is required after you finish the short introduction. You can
-        use Sign in with Apple, Google, or an email magic link. We receive the
-        identifiers those services provide so we can create and recognise your
-        account — typically an email address, and, on the first Apple sign-in,
-        the name you choose to share.
+        Signing in is required after the short introduction. You can use Sign
+        in with Apple, Google, or an email sign-in link. We receive what those
+        services provide so we can create and recognise your account: an
+        account identifier, usually an email address, and on the first Apple
+        sign-in the name you choose to share.
       </p>
       <p>
-        Sessions are stored securely on your device. Account records are held
-        by our authentication provider, Supabase.
+        Sign-in sessions are kept in your device&apos;s secure storage (the
+        iOS Keychain or Android&apos;s equivalent). Account records are held by
+        our authentication provider, Supabase.
       </p>
 
       <h3>Family profiles</h3>
       <p>
         You can create a profile for a child: a name, an optional age (stored
-        as a birth year), and an avatar — either a colour character or a photo
-        you choose. Free Maccu includes one child profile; Maccu Premium
-        removes that limit.
+        as a birth year), and an avatar, either a colour character or a photo
+        you choose. We also store which profile is currently selected. Free
+        Maccu includes one child profile; Maccu Premium removes that limit.
       </p>
       <p>
-        Profile details sync with your signed-in account so they follow you on
-        a new device. Custom avatar photos are stored privately with that
-        account. Drawings are not stored in this profile database.
+        Profile details sync with your signed-in account so they follow you to
+        a new device. Avatar photos are stored privately with that account.
+        Drawings are not stored in this profile database.
       </p>
 
       <h3>Drawings and photos</h3>
       <p>
-        When you photograph a picture, Maccu uses the camera. You can also pick
-        a photo you already have, or a picture for a profile. Processing
-        happens on your device: we find the page, tidy the scan, and save a
-        sketchbook image. There is no cloud vision service and no AI model
-        training.
+        Maccu uses the camera when you photograph a drawing, and your photo
+        library when you pick an existing photo or a profile picture.
+        Processing happens on your device: Maccu finds the drawing, tidies the
+        scan, and saves a sketchbook page. There is no cloud vision service and
+        no AI model training.
       </p>
       <p>
-        Saved pages live in Maccu&apos;s storage on your phone or tablet,
-        together with notebook choices such as which sketchbook design you
-        picked. Original photos can stay on the device if you keep them.
+        Saved pages, the original photo each page was made from, and notebook
+        choices such as which sketchbook design you picked are kept in
+        Maccu&apos;s storage on your phone or tablet.
       </p>
 
       <h3>Preferences</h3>
       <p>
-        Language (English, Deutsch, Français, Español), whether you have
-        finished onboarding, backup choices, and similar settings stay on the
-        device.
+        Your language, whether you have finished the introduction, backup
+        choices, and similar settings stay on the device.
       </p>
 
       <h3>Purchases</h3>
       <p>
         Maccu Premium is an auto-renewing subscription sold through the Apple
         App Store or Google Play. We use RevenueCat to know whether your
-        account has Premium. RevenueCat receives your Maccu account identifier
-        and the purchase events the store already has — not your drawings.
+        account has Premium. RevenueCat receives your Maccu account identifier,
+        your purchase and subscription history from the store, and basic
+        technical information about the device and app. It does not receive
+        your drawings or family profiles.
       </p>
       <p>
-        Payment card details are handled by Apple or Google, not by Maccu.
+        Payment details are handled by Apple or Google, never by Maccu.
+      </p>
+
+      <h2>How we use it</h2>
+      <p>
+        We use this information only to run Maccu: to sign you in, keep family
+        profiles in sync, provide Premium to the account that bought it, run
+        backups you turn on, answer your messages, and keep the service secure.
+      </p>
+      <p>
+        Where the law asks for a legal basis, we rely on providing the service
+        you asked for (your account, profiles, Premium, and backups), on legal
+        obligations (such as keeping purchase records), and on our legitimate
+        interest in keeping Maccu secure and working.
       </p>
 
       <h2>Where drawings go</h2>
@@ -106,65 +120,72 @@ export default function PrivacyPage() {
       </p>
       <ul>
         <li>
-          <strong>Share or export</strong> — you pick a format and a
+          <strong>Share or export:</strong> you pick a format and a
           destination in the system share sheet (a message, Photos, Files, and
           so on). Maccu does not follow the file after you share it.
         </li>
         <li>
-          <strong>Premium backup</strong> — optional copies in your own iCloud
-          (iOS) or Google Drive app data (Android). These folders belong to
-          your Apple ID or Google account, not to a public gallery. You can
-          include original photos in a backup or leave them off. Temporary
-          processing files stay on the device.
+          <strong>Premium backup:</strong> optional copies in your own iCloud
+          (iOS) or Google Drive app data (Android). These belong to your Apple
+          ID or Google account, and we cannot see them. You choose whether
+          original photos are included.
         </li>
       </ul>
       <p>
-        If Premium lapses, drawings and profiles already on the device remain.
-        New pages, extra children, extra notebook designs, effects, and
-        backups follow the free limits until you subscribe again.
+        If Premium ends, drawings and profiles already on the device remain.
       </p>
 
-      <h2>Who else sees information</h2>
-      <p>
-        We share only what is needed to run Maccu:
-      </p>
+      <h2>Who helps us run Maccu</h2>
+      <p>We share only what each service needs to do its job:</p>
       <ul>
         <li>
-          <strong>Supabase</strong> — sign-in, your account, family profile
+          <strong>Supabase</strong>: sign-in, your account, family profile
           records, and private profile photos.
         </li>
         <li>
-          <strong>Apple or Google</strong> — sign-in you choose, store
-          purchases, and, if you turn backup on, files in your iCloud or Drive
-          app data.
+          <strong>Brevo</strong>: delivers sign-in emails, so it receives your
+          email address and the email itself.
         </li>
         <li>
-          <strong>RevenueCat</strong> — whether this account has Maccu Premium.
+          <strong>Apple or Google</strong>: the sign-in you choose, store
+          purchases, and, if you turn backup on, files in your iCloud or
+          Google Drive app data.
+        </li>
+        <li>
+          <strong>RevenueCat</strong>: whether your account has Maccu Premium.
         </li>
       </ul>
       <p>
-        We do not sell this information. We do not use advertising networks,
-        analytics SDKs, or crash reporters in the current app. If the law
-        requires us to disclose something, or we must protect someone from
-        serious harm, we will do as little as that duty requires.
+        When the app connects to these services they also receive standard
+        technical details such as your IP address and device type. Each of
+        them may use your information only to provide its service and must
+        protect it at least as well as this policy does. Some of them process
+        data outside your country; where the law requires it, those transfers
+        are covered by safeguards such as standard contractual clauses.
+      </p>
+      <p>
+        We do not use advertising networks, analytics SDKs, or crash
+        reporting in the app. We disclose information only if the law requires
+        it or to protect someone from serious harm, and then only as much as
+        that requires.
       </p>
 
       <h2>Children&apos;s information</h2>
       <p>
         Maccu is not directed at children as account holders. A grown-up
         creates the account and any child profiles. Information about a child
-        — a name, optional age, avatar, and artwork — is provided by that
-        grown-up so the sketchbook can be organised.
+        (a name, optional age, avatar, and artwork) is added by that grown-up
+        so the sketchbook can be organised.
       </p>
       <p>
         We do not knowingly let a child create an account. If you believe a
-        child has done so, write to us and we will delete it. We do not use
-        children&apos;s drawings or profiles to train models or to advertise.
+        child has done so, write to us and we will delete it. We never use
+        children&apos;s drawings or profiles to train models or for
+        advertising.
       </p>
 
-      <h2>Your choices</h2>
+      <h2>Your choices and rights</h2>
       <ul>
-        <li>Change language in Grown-up corner.</li>
         <li>Edit or remove a child profile you added.</li>
         <li>Delete a drawing from a sketchbook.</li>
         <li>Share a page only when you choose to.</li>
@@ -173,60 +194,69 @@ export default function PrivacyPage() {
           included.
         </li>
         <li>
-          Restore purchases on another device signed into the same store
-          account, subject to the store&apos;s rules.
+          Allow or withdraw camera and photo access at any time in your
+          device&apos;s settings.
         </li>
-        <li>
-          Ask us to correct account details or to delete your Maccu account
-          — see{" "}
-          <a href="/delete-account">Delete account</a>.
-        </li>
+        <li>Delete your account in the app (see below).</li>
       </ul>
       <p>
-        Camera and photo access are granted in system settings and can be
-        withdrawn there. Maccu needs them only to capture or import drawings
-        and a profile picture.
+        Depending on where you live, you may also have the right to access,
+        correct, export, or delete your information, to object to or restrict
+        how we use it, and to complain to your local data protection
+        authority. Write to{" "}
+        <a href={CONTACT_MAILTO}>{CONTACT_EMAIL}</a> and we will respond
+        within the time the law allows.
       </p>
 
       <h2>Deleting your account</h2>
       <p>
-        Email{" "}
-        <a href={`${CONTACT_MAILTO}?subject=Delete%20my%20Maccu%20account`}>
-          {CONTACT_EMAIL}
-        </a>{" "}
-        from the address on the account and we will delete the Maccu account
-        and the family profile records attached to it. More detail is on the{" "}
-        <a href="/delete-account">delete account</a> page.
+        In the app, open your child&apos;s profile, scroll to the bottom, and
+        tap <strong>Delete account</strong>. This permanently deletes:
+      </p>
+      <ul>
+        <li>your Maccu account</li>
+        <li>child profiles and profile photos</li>
+        <li>drawings saved on that device</li>
+        <li>
+          Maccu backups in your iCloud or Google Drive, when the app can reach
+          them
+        </li>
+      </ul>
+      <p>
+        If you no longer have the app, you can ask us to delete the account
+        from the <a href="/delete-account">Delete account</a> page. We cannot
+        reach drawings on your devices or files in your iCloud or Google Drive
+        from there, so please remove those yourself.
       </p>
       <p>
-        Deleting Maccu does not cancel an App Store or Google Play
-        subscription — you turn that off in the store settings. Backups that
-        already sit in your iCloud or Google Drive stay under your Apple or
-        Google account until you remove them there.
+        Deleting your account does not cancel an App Store or Google Play
+        subscription; turn that off in your store settings. Apple, Google, and
+        RevenueCat may keep records of past purchases as billing and tax rules
+        require.
       </p>
 
       <h2>How long we keep it</h2>
       <p>
-        Account and profile records last for as long as the account exists.
-        Drawings on the device last until you delete them or remove the app
-        (unless you restored them from a backup you control). If you delete
-        the account, we remove the Maccu records we hold; store receipts and
-        cloud copies you own follow Apple&apos;s and Google&apos;s own rules.
+        Account and profile records are kept for as long as the account exists
+        and are deleted when you delete the account. Drawings on the device
+        are kept until you delete them, delete the account, or remove the app.
+        Records we must keep by law, such as purchase records, are kept only
+        as long as that obligation lasts.
       </p>
 
       <h2>Keeping it safe</h2>
       <p>
-        We use signed-in accounts, encrypted sessions on the device, and
-        private storage for profile photos. No method is perfect. Please keep
-        your Apple ID, Google account, and email safe, especially if a child
-        can pick up the same phone.
+        We use signed-in accounts, secure session storage on the device,
+        encrypted connections, and private storage for profile photos. No
+        method is perfect. Please keep your Apple ID, Google account, and email
+        safe, especially if a child uses the same phone.
       </p>
 
       <h2>Changes</h2>
       <p>
-        If we change how Maccu handles information in a way that matters, we
-        will update this page and the date above. Continued use after a change
-        means you are looking at the current policy.
+        If we change how Maccu handles information, we will update this page
+        and the date above. If a change is significant, we will also tell you
+        in the app or by email before it takes effect.
       </p>
 
       <h2>Contact</h2>

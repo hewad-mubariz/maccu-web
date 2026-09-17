@@ -33,20 +33,20 @@ export default function TermsPage() {
         <li>Sharing a page through the system share sheet</li>
         <li>
           Optional Maccu Premium: more children, more pages, every notebook
-          design, artwork effects, richer exports, and backup to your iCloud
-          or Google Drive
+          design, artwork effects, more export formats, and backup to your
+          iCloud or Google Drive
         </li>
       </ul>
       <p>
-        We may improve, pause, or retire a feature. Existing drawings on your
+        We may improve, pause, or retire a feature. Drawings already on your
         device stay yours.
       </p>
 
       <h2>Who may use it</h2>
       <p>
-        You must be old enough to enter a contract in your country, and you
-        must be able to look after a family sketchbook — typically a parent or
-        guardian. Maccu is not a child&apos;s own account.
+        You must be old enough to enter a contract in your country, typically
+        a parent or guardian looking after a family sketchbook. Maccu is not a
+        child&apos;s own account.
       </p>
       <p>
         If you add a child&apos;s name, age, photo, or artwork, you confirm you
@@ -55,21 +55,21 @@ export default function TermsPage() {
 
       <h2>Your account</h2>
       <p>
-        After onboarding you sign in with Apple, Google, or email. Keep that
-        sign-in safe. You are responsible for activity on the account.
+        After the introduction you sign in with Apple, Google, or email. Keep
+        that sign-in safe. You are responsible for activity on the account.
       </p>
       <p>
-        We may suspend or close an account that these terms, the law, or
-        another person&apos;s rights cannot bear. You can ask us to delete the
-        account at any time — see{" "}
-        <a href="/delete-account">Delete account</a>.
+        We may suspend or close an account that breaks these terms or the law,
+        or harms other people. You can delete your account at any time in the
+        app (profile screen → <strong>Delete account</strong>), or ask us
+        from the <a href="/delete-account">Delete account</a> page.
       </p>
 
       <h2>Your family&apos;s art</h2>
       <p>
         You keep the rights in the drawings and photos you add. You give Maccu
         a limited permission to process them on the device, show them in the
-        app, export them when you ask, and — if you turn backup on — copy them
+        app, export them when you ask, and, if you turn backup on, copy them
         into your own iCloud or Google Drive app data.
       </p>
       <p>
@@ -106,66 +106,84 @@ export default function TermsPage() {
           not cancel the store subscription.
         </li>
         <li>
-          Restoring purchases uses the same store account. A subscription
-          belongs to that store identity; it does not automatically follow a
-          different Maccu sign-in.
+          To restore a purchase, use the same Apple ID or Google account that
+          bought it.
         </li>
       </ul>
       <p>
         Without Premium you can still keep a sketchbook: one child profile, up
         to 25 saved drawings, the first notebook design, and basic exports
-        (the flattened page and the original photo). Premium unlocks unlimited
-        children and pages, every notebook design, artwork effects, transparent
-        and clean-scan exports, and cloud backup.
+        (the drawing on white and the original photo). Premium unlocks
+        unlimited children and pages, every notebook design, artwork effects,
+        transparent and clean-scan exports, and cloud backup.
       </p>
       <p>
         If Premium ends, what you already saved remains on the device. New
         drawings, extra children, extra designs, effects, and backups follow
-        the free limits until you subscribe again — you can delete older pages
+        the free limits until you subscribe again. You can delete older pages
         to make room, or upgrade.
       </p>
 
       <h2>Backups</h2>
       <p>
-        Cloud backup is a Premium feature you start yourself. Copies go to
+        Cloud backup is a Premium feature you turn on yourself. Copies go to
         your iCloud or Google Drive app data, under your Apple ID or Google
-        account. Maccu is not a substitute for the rest of your device backup
-        habits. If you switch cloud accounts or delete those files, we cannot
-        fetch them back.
+        account. Maccu is not a replacement for backing up your device. If you
+        switch cloud accounts or delete those files, we cannot get them back.
       </p>
 
       <h2>The app and this site</h2>
       <p>
-        We offer Maccu as it stands. Sketchbook scans depend on the photo, the
-        lighting, and the device. We do not promise that every drawing will
-        scan perfectly, that the service will never pause, or that a backup
-        will always complete. To the fullest extent the law allows, Maccu is
-        provided without warranties, including implied warranties of
-        merchantability, fitness for a particular purpose, and
-        non-infringement.
+        We offer Maccu as it is. Scans depend on the photo, the lighting, and
+        the device. We do not promise that every drawing will scan perfectly,
+        that the service will never pause, or that a backup will always
+        complete. To the fullest extent the law allows, Maccu is provided
+        without warranties, including implied warranties of merchantability,
+        fitness for a particular purpose, and non-infringement.
       </p>
       <p>
         To the fullest extent the law allows, Maccu is not liable for indirect,
         incidental, special, consequential, or lost-data damages, or for an
-        amount above what you paid us for Premium in the three months before
-        the claim (or zero, if you have not paid us). Some places do not allow
-        these limits; there, they apply only as far as they can.
+        amount above what you paid for Premium in the three months before the
+        claim (or zero, if you have not paid). Some places do not allow these
+        limits; there, they apply only as far as the law permits. Nothing in
+        these terms limits rights you have as a consumer that cannot be
+        waived.
+      </p>
+
+      <h2>Your licence</h2>
+      <p>
+        We give you a personal, non-transferable licence to use Maccu on
+        devices you own or control, as the App Store or Google Play usage
+        rules allow. You confirm that you are not in a country under a U.S.
+        government embargo and are not on a U.S. government list of prohibited
+        or restricted parties.
       </p>
 
       <h2>Apple and Google</h2>
       <p>
         If you download Maccu from the App Store, you and Maccu acknowledge
-        that the agreement is between you and Maccu, not Apple. Apple has no
-        obligation to provide maintenance or support. In the event Maccu fails
-        to conform to any applicable warranty, you may notify Apple, and Apple
-        may refund the purchase price for the app; to the maximum extent
-        permitted by law, Apple has no other warranty obligation. Apple is not
-        responsible for addressing claims relating to the app or your use of
-        it, including product liability, legal or regulatory requirements, and
-        consumer-protection or similar claims, or for claims that Maccu
-        infringes a third party&apos;s intellectual property. Apple and its
-        subsidiaries are third-party beneficiaries of these terms and may
-        enforce them against you.
+        that these terms are between you and Maccu, not Apple. Maccu, not
+        Apple, is responsible for the app and its content. Apple has no
+        obligation to provide maintenance or support for the app.
+      </p>
+      <p>
+        If Maccu fails to conform to any applicable warranty, you may notify
+        Apple, and Apple may refund the purchase price for the app; to the
+        maximum extent permitted by law, Apple has no other warranty
+        obligation. Apple is not responsible for addressing claims relating to
+        the app or your use of it, including product liability claims, claims
+        that the app fails to meet legal or regulatory requirements, and
+        consumer-protection or similar claims. Maccu, not Apple, is
+        responsible for investigating and handling any claim that the app
+        infringes a third party&apos;s intellectual property.
+      </p>
+      <p>
+        Questions and complaints about the app go to Maccu at{" "}
+        <a href={CONTACT_MAILTO}>{CONTACT_EMAIL}</a>. You must also follow any
+        third-party terms that apply when you use Maccu, such as your mobile
+        carrier&apos;s. Apple and its subsidiaries are third-party
+        beneficiaries of these terms and may enforce them against you.
       </p>
       <p>
         On Google Play, Google&apos;s terms for the store and for Play
@@ -175,9 +193,10 @@ export default function TermsPage() {
       <h2>Changes</h2>
       <p>
         We may update these terms as Maccu grows. The date at the top will
-        change. If you keep using Maccu after an update, the new terms apply.
-        If you cannot accept them, stop using the app and ask us to delete the
-        account.
+        change, and we will tell you in the app or by email before a
+        significant change takes effect. If you keep using Maccu after an
+        update, the new terms apply. If you do not accept them, stop using the
+        app and delete your account.
       </p>
 
       <h2>Contact</h2>
